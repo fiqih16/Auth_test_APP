@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "941685123727",
+    "firebase_url": "https://auth-test-app-eda0a-default-rtdb.firebaseio.com",
+    "project_id": "auth-test-app-eda0a",
+    "storage_bucket": "auth-test-app-eda0a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941685123727:android:e705edda7a717ec1969efa",
+        "android_client_info": {
+          "package_name": "com.fiqih.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "941685123727-n57qqidcvupotesfon7khuvqatslo8vq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkvAAySSoQIh9tO8IbxKhny6MuFwPv9tk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "941685123727-n57qqidcvupotesfon7khuvqatslo8vq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
