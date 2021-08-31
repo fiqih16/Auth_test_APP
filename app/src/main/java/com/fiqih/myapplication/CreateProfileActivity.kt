@@ -95,7 +95,7 @@ class CreateProfileActivity : AppCompatActivity() {
             val bio = bioEditText.text.toString()
             val email = emailEditText.text.toString()
 
-            if (name.isNotEmpty() || email.isNotEmpty()) {
+            if (name.isNotEmpty() && bio.isNotEmpty() && email.isNotEmpty()) {
                 progressBar.visibility = View.VISIBLE
                 imageUri?.let {
                     val contentResolver: ContentResolver = getContentResolver()

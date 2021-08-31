@@ -49,7 +49,7 @@ class RegisterActivity : AppCompatActivity() {
             val password = passwordEditText.text.toString()
             val confirmPassword = confirmPasswordEditText.text.toString()
 
-            if (email.isNotEmpty() || password.isNotEmpty() || confirmPassword.isNotEmpty()) {
+            if (email.isNotEmpty() && password.isNotEmpty() && confirmPassword.isNotEmpty()) {
                 if (password.equals(confirmPassword)) {
                     progressBar.visibility = View.VISIBLE
                     auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
