@@ -11,14 +11,20 @@
         android:id="@+id/createPostEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         />
 
     <Button
-        android:id="@+id/createPostBottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/createPostButton"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/registerButton"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/teal_700"
         android:text="Submit"
-        />
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
 
 </LinearLayout>

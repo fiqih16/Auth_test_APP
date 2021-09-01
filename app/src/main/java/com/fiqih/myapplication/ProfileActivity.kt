@@ -34,8 +34,9 @@ class ProfileActivity : AppCompatActivity() {
         backImageButton = findViewById(R.id.profileBackImageButton)
         editImageButton = findViewById(R.id.profileEditImageButton)
         imageView = findViewById(R.id.profileImageView)
+        nameTextView = findViewById(R.id.profileNameView)
         bioTextView = findViewById(R.id.profileBioText)
-        emailTextView = findViewById(R.id.profileEmailText)
+        emailTextView = findViewById(R.id.profileEmailEditText)
 
 
         backImageButton.setOnClickListener {

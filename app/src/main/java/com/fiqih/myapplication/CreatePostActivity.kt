@@ -1,5 +1,6 @@
 package com.fiqih.myapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -27,7 +28,7 @@ class CreatePostActivity : AppCompatActivity() {
         setContentView(R.layout.activity_create_post)
 
         editText = findViewById(R.id.createPostEditText)
-        postButton = findViewById(R.id.createPostBottom)
+        postButton = findViewById(R.id.createPostButton)
         auth = Firebase.auth
         database = Firebase.database
         post = Post()
@@ -52,8 +53,10 @@ class CreatePostActivity : AppCompatActivity() {
                 val postid = references.push().key!!
                 references.child(postid).setValue(post).addOnCompleteListener {
                     if (it.isSuccessful) {
-                        Toast.makeText(this,"Posted..", Toast.LENGTH_SHORT).show()
-                        }
+                        Toast.makeText(this,"Berhasil", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(this, MainActivity::class.java)
+                        startActivity(intent)
+                    }
                 }
             }
         }

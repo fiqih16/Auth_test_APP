@@ -12,20 +12,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/profileBackImageButton"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/ic_baseline_keyboard_arrow_left_24"/>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
             android:text="MY PROFILE"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:gravity="center"
-            android:layout_marginTop="8dp"/>
-        <ImageView
+            android:textSize="20sp" />
+
+        <ImageButton
             android:id="@+id/profileEditImageButton"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -52,6 +54,7 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
+            android:id="@+id/profileNameView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Name"

@@ -18,9 +18,6 @@
             android:name=".CreatePostActivity"
             android:exported="true" />
         <activity
-            android:name=".CreatePost"
-            android:exported="true" />
-        <activity
             android:name=".CreateProfileActivity"
             android:exported="true" />
         <activity
