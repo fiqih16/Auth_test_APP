@@ -1,30 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:padding="5dp"
     tools:context=".CreatePostActivity">
 
     <EditText
         android:id="@+id/createPostEditText"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        />
+        app:layout_constraintEnd_toStartOf="@+id/createPostButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/createPostButton"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_below="@+id/registerButton"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        android:backgroundTint="@color/teal_700"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Submit"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="20dp" />
+        android:backgroundTint="@color/teal_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</LinearLayout>
+    <Button
+        android:id="@+id/createPostAttachButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attach"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/teal_700"
+        app:layout_constraintTop_toBottomOf="@+id/createPostEditText" />
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/createPostPlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:visibility="invisible"
+        app:resize_mode="fixed_height"
+        app:show_timeout="0"
+        app:use_controller="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createPostAttachButton" />
+
+    <ImageView
+        android:id="@+id/createPostImageView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createPostAttachButton" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/createPostDeleteCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:visibility="invisible"
+        app:cardCornerRadius="75dp"
+        app:cardPreventCornerOverlap="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createPostAttachButton">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hapus"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
